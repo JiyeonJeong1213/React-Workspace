@@ -4,6 +4,13 @@ import './index.css';
 import App from './App';
 import App2 from './App2';
 import App3 from './App3';
+import App4 from './App4';
+import RouterComponent from './09_RouterComponent';
+import { BrowserRouter } from 'react-router-dom';
+import ReactRef from './10_Ref';
+import { FetchGet, FetchPost } from './11_Fetch';
+import { AxiosGet, AxiosPost } from './12_axios';
+
 import reportWebVitals from './reportWebVitals';
 
 
@@ -26,7 +33,18 @@ root.render(
   */
   //<App />
   //<App2/>
-  <App3/>
+  //<App3/>
+  //<App4/>
+  // <RouterComponent>
+  // </RouterComponent>
+  <BrowserRouter>
+    <RouterComponent/>
+    <ReactRef/>
+    <FetchGet/>
+    <FetchPost/>
+    <AxiosGet/>
+    <AxiosPost/>
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

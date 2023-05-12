@@ -7,7 +7,7 @@ import { shallowEqualArrays, shallowEqualObjects } from "shallow-equal";
 
     두 함수 모두 props와 state의 변경에 따라 render함수를 호출하는데 변경에 대한 기준이 약간 다름
 
-    Component에서는 setState함수 호출시 내부적으로 변경하고자 하는 state값이 같더라도 변경을로 간주하고
+    Component에서는 setState함수 호출시 내부적으로 변경하고자 하는 state값이 같더라도 변경으로 간주하고
     render()함수를 호출함
 
     PureComponent에서는 바꿀 값 자체를 실제로 비교하여 값이 동일한 경우 변경되지 않았다고 간주하고
@@ -84,11 +84,11 @@ class Shallow extends Component{
 
     stateChange = (flag) => {
         if(flag == 'string'){
-            this.setState({StateString : 'react2'}); // render함수 호출하지 않았음
+            this.setState({StateString : 'react2'}); // render함수 한번씩만 더 호출됨
         }else if(flag == 'array'){
-            this.setState({StateArray:['react2']}); // render함수 호출함
+            this.setState({StateArray:['react2']}); 
         }else{
-            this.setState({StateObject:{react:'react2'}}); // render함수 호출함
+            this.setState({StateObject:{react:'react2'}}); 
         }
     }
 

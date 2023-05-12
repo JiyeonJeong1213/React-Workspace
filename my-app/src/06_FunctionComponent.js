@@ -20,7 +20,7 @@ function FunctionComponent(props){
     const [stateString, setString]=useState('react');
     /*
         useState메서드는 길이 2짜리 배열을 반환해줌. 이를 구조분해할당으로 이용하여 반환된 값을 저장
-        반환된 값을 담아줄 첮번째 인자(stateString) : state의 변수명 (state.stateString)
+        반환된 값을 담아줄 첫번째 인자(stateString) : state의 변수명 (state.stateString)
         반환된 값을 담아줄 두번째 인자(setString) : stateString값을 변경해주는 함수를 저장(setState()와 비슷한 역할) / 값이 다를때만 실행됨(pureComponent처럼)
     */
 
@@ -42,5 +42,16 @@ function FunctionComponent(props){
         </div>
     )
 }
+
+/*
+    함수형 컴포넌트의 장점
+    1. render함수가 없기 때문에 컴포넌트 마운트 속도가 class component보다 빠르다.
+    2. 가독성이 좋다.
+    3. this를 사용하지 않기 때문에 props값을 유지할 수 있음
+      -class component에서는 this.props를 통해 props에 접근했기 때문에 props값이 변경될 수 있었음
+    4. 유일한 단점은 생명주기함수나 state관리를 할 수가 없다는 점인데, react hook의 등장으로 단점이 사라짐
+
+    리액트에서는 hook의 등장 이 후로 class component방식보다 함수형 컴포넌트 방식으로 프로그래밍하는 것을 권장
+*/
 
 export default FunctionComponent;
