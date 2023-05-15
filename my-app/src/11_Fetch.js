@@ -43,7 +43,7 @@ class FetchPost extends Component{
         const response = await fetch("http://date.jsontest.com", {
             method : 'POST', 
             header : {
-                'Content-type' : 'appication/json'
+                'Content-type' : 'application/json'
                 // json형태의 데이터를 사용하기 위한 설정(form태그 안의 enc-type과 같은 속성)
             },
             body : { // json형태의 데이터 선언
